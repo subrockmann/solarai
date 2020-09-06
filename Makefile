@@ -9,18 +9,21 @@ setup-python3:
 	sudo add-apt-repository ppa:deadsnakes/ppa
 	# Press Enter to continue
 	# Install Python 3.7
-	sudo apt install python3.7 -y
+	sudo apt install python3.7 python3-venv python3.7-venv -y
 	sudo apt install python3-pip -y
+	#sudo apt install python3.7-pip -y
 	sudo pip3 install --upgrade pip
-	sudo pip3 install virtualenv
+
+	#sudo pip3 install virtualenv
 
 virtualenv:
-	sudo python3.7 -m virtualenv .omdena
+	sudo python3.7 -m venv .omdena
 	source .omdena/bin/activate
 
 
 install-base:
 	# This should be run from inside a virtual environment
+	# inside the environment pip references pip3
 	sudo pip install wheel
 	sudo pip install cmake
 	sudo pip install setuptools
@@ -30,7 +33,7 @@ install-base:
 install-gdal:
 	sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
 	sudo apt-get install gdal-bin python3-gdal libgdal-dev -y
-	gdalinof --version
+	gdalinfo --version
 
 install-gis:
 	sudo pip install affine cligj click enum34
