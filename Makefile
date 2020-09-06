@@ -40,15 +40,15 @@ install-gdal:
 	gdalinfo --version
 
 install-gis:
-	sudo pip install affine cligj click enum34
-	sudo pip install rasterio
-	sudo pip install geopandas
+	pip install affine cligj click enum34
+	pip install rasterio
+	pip install geopandas
 	sudo apt-get install -y libspatialindex-dev
-	sudo pip install Rtree
+	pip install Rtree
 	#sudo pip install python3-rtree   ## requires libspatialindex
 	#sudo apt-get build-dep python3-lxml
-	sudo pip install lxml
+	pip install lxml
 
 install-pycoco:
-	sudo pip install cython
-	sudo pip install opencv-python pillow pycocotools matplotlib 
+	pip install cython
+	pip install opencv-python pillow pycocotools matplotlib 
