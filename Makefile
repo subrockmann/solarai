@@ -19,7 +19,7 @@ install-base:
 	sudo pip install wheel
 	sudo pip install cmake
 	sudo pip install setuptools
-	sudo app-get install python-numpy
+	sudo apt-get install python-numpy
 	#sudo pip install -r requirements-base.txt
 
 install-gdal:
