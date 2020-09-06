@@ -13,7 +13,7 @@ setup-python3:
 	sudo apt install python3-pip -y
 	#sudo apt install python3.7-pip -y
 	sudo pip3 install --upgrade pip
-
+	sudo apt-get install unzip	
 	#sudo pip3 install virtualenv
 
 virtualenv:
@@ -51,4 +51,6 @@ install-gis:
 
 install-pycoco:
 	pip install cython
-	pip install opencv-python pillow pycocotools matplotlib 
+	pip install opencv-python pillow matplotlib 
+	# wget -P /path/to/directory <download-url>
+	wget -P ./cocoapi.zip https://github.com/cocodataset/cocoapi/archive/master.zip 
