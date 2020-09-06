@@ -19,9 +19,9 @@ setup-python3:
 
 	# update default python version on ubuntu - SYSTEM WIDE CHANGE!
 	# https://linuxconfig.org/how-to-change-from-default-to-alternative-python-version-on-debian-linux
-	update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
-	update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
-	update-alternatives --list python
+	sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+	sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+	sudo update-alternatives --list python
 
 virtualenv:
 	sudo python3.7 -m venv .omdena
