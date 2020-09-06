@@ -17,10 +17,18 @@ setup-python3:
 install-base:
 	# This should be run from inside a virtual environment
 	sudo pip install wheel
+	sudo pip install cmake
+	sudo pip install setuptools
 	sudo app-get install python-numpy
-	sudo pip install -r requirements-base.txt
+	#sudo pip install -r requirements-base.txt
 
 install-gdal:
 	sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
 	sudo apt-get install gdal-bin python3-gdal libgdal-dev -y
 	gdalinof --version
+
+install-gis:
+	sudo pip install affine cligj click enum34
+	sudo pip install rasterio
+	sudo pip install geopandas
+	sudo pip install python3-rtree
