@@ -39,4 +39,5 @@ install-gis:
 	sudo pip install affine cligj click enum34
 	sudo pip install rasterio
 	sudo pip install geopandas
-	sudo pip install python3-rtree
+	sudo apt-get install -y libspatialindex-dev
+	sudo pip install python3-rtree   ## requires libspatialindex
