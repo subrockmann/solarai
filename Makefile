@@ -24,11 +24,13 @@ virtualenv:
 install-base:
 	# This should be run from inside a virtual environment
 	# inside the environment pip references pip3
-	sudo pip install wheel
-	sudo pip install cmake
-	sudo pip install setuptools
+	# do not use 'sudo pip' inside the environment
+	pip install wheel
+	pip install cmake
+	pip install setuptools
 	sudo apt-get install python-numpy -y
-	sudo pip install -r requirements-base.txt
+	pip install -r requirements-base.txt
+	pip install numpy  #did not get picked up from requirements
 
 install-gdal:
 	sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
