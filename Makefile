@@ -26,12 +26,12 @@ install-base:
 	# This should be run from inside a virtual environment
 	# inside the environment pip references pip3
 	# do not use 'sudo pip' inside the environment
-	export PIP_USER=false
-	pip install wheel --user
-	#pip install cmake --user
-	#pip install setuptools --user
-	#sudo apt-get install python-numpy -y
-	#pip install -r requirements-base.txt
+	export PIP_USER=false # fix error: https://github.com/pre-commit/pre-commit/issues/1151
+	pip install wheel
+	pip install cmake
+	pip install setuptools
+	sudo apt-get install python-numpy -y
+	pip install -r requirements-base.txt
 	#pip install numpy  #did not get picked up from requirements
 
 install-gdal:
