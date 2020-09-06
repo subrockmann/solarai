@@ -2,6 +2,7 @@ setup-python3:
 	sudo apt update 
 	sudo apt upgrade
 	sudo apt-get install software-properties-common
+	sudo apt-get update
 	# remove exiting python3 version from system
 	sudo apt purge python3
 	# Add deadsnakes PPA to sources
