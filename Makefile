@@ -28,7 +28,7 @@ install-base:
 	sudo pip install cmake
 	sudo pip install setuptools
 	sudo apt-get install python-numpy -y
-	#sudo pip install -r requirements-base.txt
+	sudo pip install -r requirements-base.txt
 
 install-gdal:
 	sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
@@ -45,3 +45,6 @@ install-gis:
 	#sudo apt-get build-dep python3-lxml
 	sudo pip install lxml
 
+install-pycoco:
+	sudo pip install cython
+	sudo pip install opencv-python pillow pycocotools matplotlib 
