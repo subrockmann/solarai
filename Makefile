@@ -9,8 +9,9 @@ setup-python3:
 	sudo add-apt-repository ppa:deadsnakes/ppa
 	# Press Enter to continue
 	# Install Python 3.7
-	sudo apt install python3.7
-	sudo apt install --upgrade pip
+	sudo apt install python3.7 -y
+	sudo apt install python3-pip -y
+	sudo pip3 install --upgrade pip
 	sudo pip3 install virtualenv
 
 install-base:
