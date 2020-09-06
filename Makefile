@@ -21,10 +21,12 @@ virtualenv:
 	source .omdena/bin/activate
 
 
+
 install-base:
 	# This should be run from inside a virtual environment
 	# inside the environment pip references pip3
 	# do not use 'sudo pip' inside the environment
+	export PIP_USER=false
 	pip install wheel --user
 	#pip install cmake --user
 	#pip install setuptools --user
