@@ -32,7 +32,7 @@ install-base:
 	pip install setuptools
 	sudo apt-get install python-numpy -y
 	pip install -r requirements-base.txt
-	#pip install scikit-image
+	pip install scikit-image
 	#pip install numpy  #did not get picked up from requirements
 
 install-gdal:
