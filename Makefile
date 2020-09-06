@@ -14,12 +14,17 @@ setup-python3:
 	sudo pip3 install --upgrade pip
 	sudo pip3 install virtualenv
 
+virtualenv:
+	sudo python3.7 -m virtualenv .omdena
+	source .omdena/bin/activate
+
+
 install-base:
 	# This should be run from inside a virtual environment
 	sudo pip install wheel
 	sudo pip install cmake
 	sudo pip install setuptools
-	sudo apt-get install python-numpy
+	sudo apt-get install python-numpy -y
 	#sudo pip install -r requirements-base.txt
 
 install-gdal:
