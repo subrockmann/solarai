@@ -14,7 +14,14 @@ setup-python3:
 	#sudo apt install python3.7-pip -y
 	sudo pip3 install --upgrade pip
 	sudo apt-get install unzip	
+	#sudo pip3 install setuptools  # needed for build of pycoco in Python3.6
 	#sudo pip3 install virtualenv
+
+	# update default python version on ubuntu - SYSTEM WIDE CHANGE!
+	# https://linuxconfig.org/how-to-change-from-default-to-alternative-python-version-on-debian-linux
+	update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+	update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+	update-alternatives --list python
 
 virtualenv:
 	sudo python3.7 -m venv .omdena
@@ -54,4 +61,7 @@ install-pycoco:
 	pip install cython
 	pip install opencv-python pillow matplotlib 
 	# wget -P /path/to/directory <download-url>
-	wget -P ./cocoapi.zip https://github.com/cocodataset/cocoapi/archive/master.zip 
+	mkdir tmp
+	cd tmp
+	wget -P coco.zip https://github.com/cocodataset/cocoapi/archive/master.zip 
+	unzip coco.zip -d ./cocoapi
