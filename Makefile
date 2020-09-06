@@ -10,7 +10,7 @@ setup-python3:
 	# Press Enter to continue
 	# Install Python 3.7
 	sudo apt install python3.7
-	sudo apt install --upgrade pip3
+	sudo apt install --upgrade pip
 	sudo pip3 install virtualenv
 
 install-base:
