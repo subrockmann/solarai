@@ -42,3 +42,6 @@ install-gis:
 	sudo apt-get install -y libspatialindex-dev
 	sudo pip install Rtree
 	#sudo pip install python3-rtree   ## requires libspatialindex
+	#sudo apt-get build-dep python3-lxml
+	sudo pip install lxml
+
