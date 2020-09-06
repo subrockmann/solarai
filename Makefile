@@ -40,4 +40,5 @@ install-gis:
 	sudo pip install rasterio
 	sudo pip install geopandas
 	sudo apt-get install -y libspatialindex-dev
-	sudo pip install python3-rtree   ## requires libspatialindex
+	sudo pip install Rtree
+	#sudo pip install python3-rtree   ## requires libspatialindex
